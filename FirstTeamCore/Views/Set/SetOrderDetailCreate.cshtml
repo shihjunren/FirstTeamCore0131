@@ -1,0 +1,88 @@
+﻿@model FirstTeamCore.Models.ShopDetail
+
+@{
+    ViewData["Title"] = "SetOrderDetailCreate";
+}
+
+<h1>SetOrderDetailCreate</h1>
+
+<h4>ShopDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SetOrderDetailCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="訂單編號" class="control-label"></label>
+                <input asp-for="訂單編號" class="form-control" />
+                <span asp-validation-for="訂單編號" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="購物商店id" class="control-label"></label>
+                <input asp-for="購物商店id" class="form-control" />
+                <span asp-validation-for="購物商店id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="會員編號" class="control-label"></label>
+                <input asp-for="會員編號" class="form-control" />
+                <span asp-validation-for="會員編號" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="成立時間" class="control-label"></label>
+                <input asp-for="成立時間" class="form-control" />
+                <span asp-validation-for="成立時間" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="細項" class="control-label"></label>
+                <input asp-for="細項" class="form-control" />
+                <span asp-validation-for="細項" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="總價" class="control-label"></label>
+                <input asp-for="總價" class="form-control" />
+                <span asp-validation-for="總價" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="購物評價" class="control-label"></label>
+                <input asp-for="購物評價" class="form-control" />
+                <span asp-validation-for="購物評價" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="購物評分" class="control-label"></label>
+                <input asp-for="購物評分" class="form-control" />
+                <span asp-validation-for="購物評分" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="建立人" class="control-label"></label>
+                <input asp-for="建立人" class="form-control" />
+                <span asp-validation-for="建立人" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="建立時間" class="control-label"></label>
+                <input asp-for="建立時間" class="form-control" />
+                <span asp-validation-for="建立時間" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="修改人" class="control-label"></label>
+                <input asp-for="修改人" class="form-control" />
+                <span asp-validation-for="修改人" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="修改時間" class="control-label"></label>
+                <input asp-for="修改時間" class="form-control" />
+                <span asp-validation-for="修改時間" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
